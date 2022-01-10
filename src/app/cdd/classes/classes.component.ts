@@ -1,6 +1,7 @@
 import { Generos } from './../modelos/generos';
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-classes',
   templateUrl: './classes.component.html',
