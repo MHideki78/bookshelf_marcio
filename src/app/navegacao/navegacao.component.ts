@@ -1,9 +1,12 @@
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { catchError, Observable, of } from 'rxjs';
+import { map, shareReplay } from 'rxjs/operators';
+
+import { AppLoginComponent } from './../app-login/app-login.component';
 import { MenuNavegador } from './../modelosInterface/menuNavegador';
 import { NavegacaoService } from './../servicosInterface/navegacao.service';
-import { Component } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable, catchError, of } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-navegacao',
@@ -13,9 +16,6 @@ import { map, shareReplay } from 'rxjs/operators';
 export class NavegacaoComponent {
   //Itens co menu principal.
   tituloNav='BookShelf v1';
-  usuario={userName: 'Victor Icoma', icone:'remember_me'};
-  //Itens da Barra superior.
-  tituloBarra='[Sua Estante Virtual]';
   //Itens de icones e imagens de navegação.
   iconeGeral='../../assets/imagens/ShelfBook.png';
   lIcone=80;
@@ -27,9 +27,9 @@ export class NavegacaoComponent {
       map(result => result.matches),
       shareReplay()
     );
-
   constructor(
     private breakpointObserver: BreakpointObserver,
+    private telaLogin: MatDialog,
     private navegadorService: NavegacaoService
     ) {
       this.itensMenu$ = navegadorService.listagemMenu()
@@ -40,4 +40,9 @@ export class NavegacaoComponent {
       )
     }
 
+    abrirLogin(erroMsg: string){
+      this.telaLogin.open(AppLoginComponent,{
+        data: erroMsg
+      })
+    }
 }

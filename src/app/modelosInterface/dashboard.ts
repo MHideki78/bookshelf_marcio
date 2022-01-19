@@ -1,6 +1,6 @@
 export interface Dashboard {
-    title: string;
-    img: string;
-    cols: number;
-    rows: number;
+  title: string;
+  img: string;
+  cols: number;
+  rows: number;
 }

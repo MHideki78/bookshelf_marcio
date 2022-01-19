@@ -1,5 +1,5 @@
 export interface MenuNavegador {
-    linkMenu:string;
-    labelMenu: string;
-    hab: boolean;
+  linkMenu:string;
+  labelMenu: string;
+  hab: boolean;
 }

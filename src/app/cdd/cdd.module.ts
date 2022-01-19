@@ -15,7 +15,7 @@ import { ClassesComponent } from './classes/classes.component';
     CommonModule,
     CddRoutingModule,
     AppMaterialModule,
-    AppCompartilhadoModule,
+    AppCompartilhadoModule
   ]
 })
 export class CddModule { }

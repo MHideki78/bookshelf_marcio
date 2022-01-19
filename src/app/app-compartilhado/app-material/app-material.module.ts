@@ -6,16 +6,18 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatBadgeModule} from '@angular/material/badge';
 
 @NgModule({
   exports:[
-  MatButtonModule,
-  MatCardModule,
-  MatIconModule,
-  MatTableModule,
-  MatToolbarModule,
-  MatProgressSpinnerModule,
-  MatDialogModule,
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule,
+    MatTableModule,
+    MatToolbarModule,
+    MatProgressSpinnerModule,
+    MatDialogModule,
+    MatBadgeModule
   ]
 })
 export class AppMaterialModule { }

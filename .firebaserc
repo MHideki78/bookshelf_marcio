@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "bookshelf-36a44": {
+      "hosting": {
+        "bookshelf_marcio": [
+          "bookshelf-36a44"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "bookshelf-36a44"
+  }
+}
